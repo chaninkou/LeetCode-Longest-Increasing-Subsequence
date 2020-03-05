@@ -8,6 +8,7 @@ public class FindLongestIncreaseSubsequenceFunction {
 			return 0;
 		}
 		
+		// Each element will store the max number of increasing subsequences
 		int[] dp = new int[nums.length];
 		
 		// 1 as default since the current element itself is a increasing value
