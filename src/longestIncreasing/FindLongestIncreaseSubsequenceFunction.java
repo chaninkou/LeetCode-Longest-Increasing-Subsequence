@@ -14,14 +14,15 @@ public class FindLongestIncreaseSubsequenceFunction {
 		// 1 as default since the current element itself is a increasing value
 		Arrays.fill(dp, 1);
 		
+		// since 1 is the minimum in the dp
 		int longestMax = 1;
 		
-		// Will keep increasing start and compare if it is bigger than end
+		// O(n^2) since we checking from 0 to end every loop
 		for(int end = 1; end < nums.length; end++){
 			
 			for(int start = 0; start < end; start++){
 				if(nums[end] > nums[start]){
-					// dp[end] will store the max from that length
+					// dp[start] will have whatever max it had before
 					dp[end] = Math.max(dp[end], dp[start] + 1);
 				}
 			}
