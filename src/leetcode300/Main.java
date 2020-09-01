@@ -1,4 +1,4 @@
-package longestIncreasing;
+package leetcode300;
 
 import java.util.Arrays;
 
